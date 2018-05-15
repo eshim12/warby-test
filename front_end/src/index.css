@@ -12,8 +12,14 @@ body {
   z-index: -1;
 }
 
+.webcam {
+  position:relative;
+  height: 200px;
+}
+
 .glasses {
   position: absolute;
   margin: auto;
+  height: 150px;
   z-index: 0;
 }

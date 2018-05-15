@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Menu, Segment } from 'semantic-ui-react';
 
 class NavBar extends Component {
-  state = { activeItem: 'logout' }
+  state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -13,10 +13,8 @@ class NavBar extends Component {
     return (
       <div>
         <Menu pointing secondary>
-          <Menu.Item as={NavLink} to='/' name='home' />
-          <Menu.Item as={NavLink} to='/about' name='about' />
-          <Menu.Item as={NavLink} to='/products' name='products' />
-          <Menu.Item as={NavLink} to='/camera' name='camera' />
+          <Menu.Item as={NavLink} to='/' name='home' active={activeItem === 'home'} onClick={this.handleItemClick}/>
+          <Menu.Item as={NavLink} to='/camera' name='camera' active={activeItem === 'camera'} onClick={this.handleItemClick}/>
 
           <Menu.Menu position='right'>
             <Menu.Item name='logout' active={activeItem === 'logout'} onClick={this.handleItemClick} />
