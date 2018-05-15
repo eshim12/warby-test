@@ -74,7 +74,7 @@ class Camera extends Component {
 
     return (
       <div>
-        <h2><center>Try it on!</center></h2>
+        <h2>Try it on!</h2>
         <div className='webcam'>
           <Webcam
             id="content"

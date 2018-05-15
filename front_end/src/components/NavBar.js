@@ -11,10 +11,11 @@ class NavBar extends Component {
     const { activeItem } = this.state
 
     return (
-      <div>
+      <div className='navBar'>
         <Menu pointing secondary>
-          <Menu.Item as={NavLink} to='/' name='home' active={activeItem === 'home'} onClick={this.handleItemClick}/>
-          <Menu.Item as={NavLink} to='/camera' name='camera' active={activeItem === 'camera'} onClick={this.handleItemClick}/>
+          <Menu.Item as={NavLink} to='/' name='you' active={activeItem === 'you'} onClick={this.handleItemClick}/>
+          <Menu.Item as={NavLink} to='/camera' name='try it on' active={activeItem === 'camera'} onClick={this.handleItemClick}/>
+          <Menu.Item as={NavLink} to='/products' name='glasses' active={activeItem === 'glasses'} onClick={this.handleItemClick}/>
 
           <Menu.Menu position='right'>
             <Menu.Item name='logout' active={activeItem === 'logout'} onClick={this.handleItemClick} />
