@@ -17,8 +17,21 @@ const authReducer = (state = initialState, action) => {
   }
 };
 
+const usersReducer = (state = [], action) => {
+  switch (action.type) {
+    case 'GET_ALL_USERS':
+      console.log("getting the action");
+      return action.users
+    default:
+      console.log("not returning correct state?", action);
+      return state
+
+  }
+}
+
 const rootReducer = combineReducers({
-  auth: authReducer,
+  authz: authReducer,
+  users: usersReducer
 });
 
 export default rootReducer

@@ -4,13 +4,9 @@ class Api::V1::GlassesController < ApplicationController
     render json: @glasses
   end
 
-  def update
-      @glass.update(glass_params)
-    if @glass.save
-      render json: @glass, status: :accepted
-    else
-      render json: { errors: @glass.errors.full_messages }, status: :unprocessible_entity
-    end
+  def create
+    glass = Glass.create(glass)
+    render json: glass, status: 201
   end
 
   private
