@@ -97,7 +97,7 @@ class Camera extends Component {
         </div>
         <div>
           <center>
-            {category != 'all' ? glasses.filter(glass => glass.category === category).map(glass => <div key={glass.key} id={glass.key} onClick={this.handleClick}><img style={{width:'50%'}} src={glass.src} id={glass.key}/></div>) : glasses.map(glass => <div key={glass.key} id={glass.key} onClick={this.handleClick}><img style={{width:'50%'}} src={glass.src} id={glass.key}/></div>)}
+            {category !== 'all' ? glasses.filter(glass => glass.category === category).map(glass => <div key={glass.key} id={glass.key} onClick={this.handleClick}><img style={{width:'50%'}} src={glass.src} id={glass.key}/></div>) : glasses.map(glass => <div key={glass.key} id={glass.key} onClick={this.handleClick}><img style={{width:'50%'}} src={glass.src} id={glass.key}/></div>)}
           </center>
         </div>
       </div>

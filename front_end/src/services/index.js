@@ -8,8 +8,16 @@ const getUsers = () => {
     .then(res => res.json())
 }
 
+const getGlasses = () => {
+  return fetch('/api/v1/glasses')
+    .then(res => res.json())
+}
+
 export const adapter = {
   users: {
     getUsers
+  },
+  glasses: {
+    getGlasses
   }
 };

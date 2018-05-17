@@ -25,13 +25,24 @@ const usersReducer = (state = [], action) => {
     default:
       console.log("not returning correct state?", action);
       return state
+  }
+}
 
+const glassesReducer = (state = [], action) => {
+  switch (action.type) {
+    case 'GET_ALL_GLASSES':
+      console.log("getting glassez");
+      return action.glasses
+    default:
+      console.log("no glassez?");
+      return state
   }
 }
 
 const rootReducer = combineReducers({
   authz: authReducer,
-  users: usersReducer
+  users: usersReducer,
+  glasses: glassesReducer
 });
 
 export default rootReducer

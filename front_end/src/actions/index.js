@@ -10,3 +10,14 @@ export const fetchUsers = () => dispatch => {
       })
     })
 }
+
+export const fetchGlasses = () => dispatch => {
+  dispatch({type: 'ASYNC_START'});
+  adapter.glasses.getGlasses()
+    .then(glasses => {
+      console.log("all glasses", glasses);
+      dispatch({
+        type: 'GET_ALL_GLASSES', glasses
+      })
+    })
+}
